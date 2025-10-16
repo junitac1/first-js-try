@@ -16,7 +16,6 @@
         rel="stylesheet">
     <title>Phone Box</title>
     <style>
-        /* Reset */
         * {
             margin: 0;
             padding: 0;
@@ -36,7 +35,6 @@
             font-style: normal;
         }
 
-        /* Header */
         header {
             border-top-left-radius: 50px;
             border-top-right-radius: 50px;
@@ -55,7 +53,6 @@
             font-size: 14px;
         }
 
-        /* Container Utama */
         .container {
             display: flex;
             justify-content: center;
@@ -64,14 +61,12 @@
             gap: 40px;
         }
 
-        /* Gambar Produk */
         .product-image img {
             width: 350px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
-        /* Detail Produk */
         .product-details {
             max-width: 500px;
         }
@@ -150,27 +145,23 @@
     </header>
 
     <main class="container">
-        <!-- Gambar Produk -->
         <div class="product-image">
             <img id="img" src="../img/tint1.jpg" alt="tint">
         </div>
 
-        <!-- Detail Produk -->
         <div class="product-details">
             <h2 id="title" class="typografi" style="color: #bd305f; font-size: 50px;">Ribbon – sheer pink</h2>
 
             <p class="price">Rp. 279.000</p>
 
             <div class="bg-pink">
-                <!-- Warna Pilihan -->
                 <div class="colors">
                     <label><input type="radio" onclick="pick('ribbon')" name="color" checked> Ribbon</label>
                     <label><input type="radio" onclick="pick('toast')" name="color"> Toast</label>
                     <label><input type="radio" onclick="pick('rasberi')" name="color"> Raspberry Jelly</label>
                     <label><input type="radio" onclick="pick('peach')" name="color"> Peach Pit</label>
                 </div>
-
-                <!-- Spesifikasi -->
+                
                 <table>
                     <tr>
                         <th>Key Benefits</th>
@@ -195,7 +186,7 @@
     </main>
     <script>
         var ribbon = {
-            image: "../img/tint1.jpg",
+            image: "img/tint1.jpg",
             title: "Ribbon - Sheer Pink",
             key: "Hydration, plumping effect",
             texture: "Lightweight, glossy",
@@ -204,7 +195,7 @@
         }
 
         var toast = {
-            image: "../img/tint2.jpg",
+            image: "img/tint2.jpg",
             title: "Toast - Rose Taupe",
             key: "Natural look, ideal for no-makeup makeup",
             texture: "Creamy, smooth",
@@ -213,7 +204,7 @@
         }
 
         var rasberi = {
-            image: "../img/tint3.jpg",
+            image: "img/tint3.jpg",
             title: "Raspberry - Crushed Berry",
             key: "Adds a pop of color, cheerful vibe",
             texture: "Glossy, lightweight",
@@ -222,7 +213,7 @@
         }
 
         var peach = {
-            image: "../img/tint4.jpg",
+            image: "img/tint4.jpg",
             title: "Peach Pit - Natural Peach",
             key: "Fresh everyday color, casual friendly",
             texture: "Smooth, soft",
@@ -252,5 +243,6 @@
 
     </script>
 </body>
+
 
 </html>
