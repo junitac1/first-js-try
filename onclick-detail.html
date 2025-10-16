@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- font google -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+IN:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playwrite+IN:wght@100..400&family=Playwrite+MX+Guides&display=swap"
+        rel="stylesheet">
+    <title>Phone Box</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .typografi {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .typografi2 {
+            font-family: "Source Code Pro", monospace;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+
+        /* Header */
+        header {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            background: #850E35;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 14px;
+        }
+
+        /* Container Utama */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 30px;
+            gap: 40px;
+        }
+
+        /* Gambar Produk */
+        .product-image img {
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Detail Produk */
+        .product-details {
+            max-width: 500px;
+        }
+
+        .product-details h2 {
+            margin-bottom: 15px;
+        }
+
+        .bg-pink {
+            background-color: #FFC4C4;
+            padding: 20px;
+            border-top-right-radius: 40px;
+            border-bottom-right-radius: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(42, 40, 40, 0.2);
+        }
+
+        input[type="radio"] {
+            accent-color: #850E35;
+        }
+
+        .colors {
+            margin-bottom: 20px;
+            color: #EE6983;
+            font-weight: bold;
+        }
+
+        .colors label {
+            margin-right: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            color: #850E35;
+            padding: 10px;
+            text-align: left;
+            width: 150px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .buy-btn {
+            background: #850E35;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background: #EE6983;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <h1 style="color: #FFF5E4;">color palet</h1>
+    <h1 style="color: #FFC4C4;">color palet</h1>
+    <h1 style="color: #EE6983;">color palet</h1>
+    <h1 style="color: #850E35;">color palet</h1> -->
+    <header>
+        <h1 class="typografi" style="font-size: 50px; color: #FFC4C4;">Peptide Lip-tint</h1>
+        <p class="typografi2">Jalan Gunung Agung No. 122 Denpasar Utara Bali</p>
+    </header>
+
+    <main class="container">
+        <!-- Gambar Produk -->
+        <div class="product-image">
+            <img id="img" src="../img/tint1.jpg" alt="tint">
+        </div>
+
+        <!-- Detail Produk -->
+        <div class="product-details">
+            <h2 id="title" class="typografi" style="color: #bd305f; font-size: 50px;">Ribbon – sheer pink</h2>
+
+            <p class="price">Rp. 279.000</p>
+
+            <div class="bg-pink">
+                <!-- Warna Pilihan -->
+                <div class="colors">
+                    <label><input type="radio" onclick="pick('ribbon')" name="color" checked> Ribbon</label>
+                    <label><input type="radio" onclick="pick('toast')" name="color"> Toast</label>
+                    <label><input type="radio" onclick="pick('rasberi')" name="color"> Raspberry Jelly</label>
+                    <label><input type="radio" onclick="pick('peach')" name="color"> Peach Pit</label>
+                </div>
+
+                <!-- Spesifikasi -->
+                <table>
+                    <tr>
+                        <th>Key Benefits</th>
+                        <td id="key">Hydration, plumping effect</td>
+                    </tr>
+                    <tr>
+                        <th>Texture</th>
+                        <td id="texture">Lightweight, glossy</td>
+                    </tr>
+                    <tr>
+                        <th>Finish</th>
+                        <td id="finish">Natural & Fresh</td>
+                    </tr>
+                    <tr>
+                        <th>Formula</th>
+                        <td id="formula">Peptides, Shea Butter, Cupuaçu, Babassu</td>
+                    </tr>
+                </table>
+            </div>
+            <button class="buy-btn">Buy Now</button>
+        </div>
+    </main>
+    <script>
+        var ribbon = {
+            image: "../img/tint1.jpg",
+            title: "Ribbon - Sheer Pink",
+            key: "Hydration, plumping effect",
+            texture: "Lightweight, glossy",
+            finish: "Natural & Fresh",
+            formula: "Peptides, Shea Butter, Cupuaçu"
+        }
+
+        var toast = {
+            image: "../img/tint2.jpg",
+            title: "Toast - Rose Taupe",
+            key: "Natural look, ideal for no-makeup makeup",
+            texture: "Creamy, smooth",
+            finish: "Natural & Elegant",
+            formula: "Peptides, Shea Butter, Cupuaçu, Babassu"
+        }
+
+        var rasberi = {
+            image: "../img/tint3.jpg",
+            title: "Raspberry - Crushed Berry",
+            key: "Adds a pop of color, cheerful vibe",
+            texture: "Glossy, lightweight",
+            finish: "Bright & Playful",
+            formula: "Peptides, Shea Butter, Babassu"
+        }
+
+        var peach = {
+            image: "../img/tint4.jpg",
+            title: "Peach Pit - Natural Peach",
+            key: "Fresh everyday color, casual friendly",
+            texture: "Smooth, soft",
+            finish: "Warm & Fresh",
+            formula: "Peptides, Cupuaçu, Babassu"
+        }
+
+        // ada 2 cara, pake if else sama cara yang satu ni aku ga tau namanya apa
+
+        function pick(option) {
+
+            image = window[option].image
+            title = window[option].title
+            key = window[option].key
+            texture = window[option].texture
+            finish = window[option].finish
+            formula = window[option].formula
+
+            document.getElementById("img").src = image
+            document.getElementById("title").innerHTML = title
+            document.getElementById("key").innerHTML = key
+            document.getElementById("texture").innerHTML = texture
+            document.getElementById("finish").innerHTML = finish
+            document.getElementById("formula").innerHTML = formula
+
+        }
+
+    </script>
+</body>
+
+</html>
